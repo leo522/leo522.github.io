@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Leo 里歐作品集</title>
+<meta name="description" content="從半導體製程工程到 .NET 全端架構：醫療、運動科學與數位轉型系統開發作品集。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;900&family=Noto+Sans+TC:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+:root{
+  --bg:#F3F5F4;
+  --surface:#FFFFFF;
+  --ink:#15201D;
+  --muted:#56635F;
+  --line:#D3DAD7;
+  --accent:#1D5C86;
+  --accent-soft:#E3EDF4;
+  --signal:#A8650F;
+  --signal-soft:#F6ECDD;
+  --serif:"Noto Serif TC","Songti TC","PMingLiU",serif;
+  --sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,"Cascadia Mono",Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#0F1513;--surface:#172019;--ink:#E4EBE8;--muted:#9AA8A3;--line:#2C3833;
+    --accent:#86B8DD;--accent-soft:#1B2B36;--signal:#E3A952;--signal-soft:#2E2518;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0F1513;--surface:#172019;--ink:#E4EBE8;--muted:#9AA8A3;--line:#2C3833;
+  --accent:#86B8DD;--accent-soft:#1B2B36;--signal:#E3A952;--signal-soft:#2E2518;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.75;padding-inline:20px;padding-block:0 72px}
+.wrap{max-width:1040px;margin:0 auto}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+h1,h2,h3{text-wrap:balance;margin:0}
+p{margin:0}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+/* top bar */
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:22px;border-bottom:1px solid var(--line)}
+.top .who{font-family:var(--mono);font-size:13px;letter-spacing:.06em}
+.top nav{display:flex;gap:18px;flex-wrap:wrap;font-size:14px}
+.top nav a{color:var(--muted);text-decoration:none}
+.top nav a:hover{color:var(--ink)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.35fr 1fr;gap:48px;padding-block:64px 56px;align-items:end}
+.hero h1{font-family:var(--serif);font-weight:900;font-size:clamp(34px,5.6vw,58px);line-height:1.22;letter-spacing:.01em}
+.hero h1 .x{font-family:var(--mono);font-weight:400;color:var(--signal);font-size:.62em;vertical-align:.18em;margin-inline:.18em}
+.hero .lead{margin-top:22px;max-width:36em;color:var(--muted);font-size:17px}
+.hero .role{margin-top:26px;display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-family:var(--mono);font-size:12.5px;padding:3px 10px;border:1px solid var(--line);border-radius:4px;color:var(--ink);background:var(--surface);white-space:nowrap}
+.years{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);background:var(--surface)}
+.years div{padding:22px 20px}
+.years div+div{border-left:1px solid var(--line)}
+.years b{display:block;font-family:var(--mono);font-size:44px;line-height:1;font-weight:600;font-variant-numeric:tabular-nums}
+.years div:first-child b{color:var(--signal)}
+.years div:last-child b{color:var(--accent)}
+.years span{display:block;margin-top:10px;font-size:14px;color:var(--muted);line-height:1.5}
+.years .cap{grid-column:1/-1;border-left:0;border-top:1px solid var(--line);font-size:13px;color:var(--muted);padding:12px 20px;line-height:1.6}
+
+/* section */
+section{padding-block:56px;border-top:1px solid var(--line)}
+.sec-head{display:grid;grid-template-columns:220px 1fr;gap:32px;margin-bottom:32px}
+.sec-head h2{font-family:var(--serif);font-weight:900;font-size:28px;line-height:1.35}
+.sec-head p{color:var(--muted);max-width:40em}
+
+/* results */
+.results{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);background:var(--surface)}
+.results div{padding:22px 20px;display:flex;flex-direction:column;gap:8px}
+.results div+div{border-left:1px solid var(--line)}
+.results b{font-family:var(--mono);font-size:30px;font-weight:600;line-height:1.1;font-variant-numeric:tabular-nums;color:var(--ink)}
+.results b small{font-size:.55em;color:var(--signal);margin-right:2px}
+.results span{font-size:14px;color:var(--muted);line-height:1.55}
+.results em{font-style:normal;font-size:12px;color:var(--muted);font-family:var(--mono);margin-top:auto}
+
+/* route (experience) */
+.route{list-style:none;margin:0;padding:0;position:relative}
+.route li{display:grid;grid-template-columns:220px 1fr;gap:32px;padding-block:18px;position:relative}
+.route li+li{border-top:1px dashed var(--line)}
+.route .stn{display:flex;align-items:flex-start;gap:12px}
+.route .code{font-family:var(--mono);font-size:12px;color:var(--accent);background:var(--accent-soft);padding:2px 7px;border-radius:3px;letter-spacing:.04em;flex:none;margin-top:3px}
+.route .org{font-weight:700;line-height:1.5}
+.route .org small{display:block;font-weight:400;color:var(--muted);font-size:13.5px}
+.route .now .code{background:var(--signal-soft);color:var(--signal)}
+.route p{color:var(--ink)}
+.route p+p{margin-top:6px;color:var(--muted);font-size:15px}
+
+/* projects */
+.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);padding:24px 22px;display:flex;flex-direction:column;gap:14px}
+.card .ctx{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.04em}
+.card h3{font-family:var(--serif);font-weight:900;font-size:21px;line-height:1.4}
+.card p{font-size:15px;color:var(--muted)}
+.card ul{margin:0;padding-left:1.1em;font-size:14.5px;display:flex;flex-direction:column;gap:4px}
+.card ul li::marker{color:var(--accent)}
+.stack{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:6px}
+.stack span{font-family:var(--mono);font-size:11.5px;color:var(--accent);background:var(--accent-soft);padding:2px 7px;border-radius:3px}
+
+.more{margin-top:28px;border-top:1px solid var(--line)}
+.more .row{display:grid;grid-template-columns:220px 1fr 280px;gap:24px;padding-block:16px;border-bottom:1px solid var(--line);align-items:baseline}
+.more .row h4{margin:0;font-size:16px;line-height:1.5}
+.more .row h4 small{display:block;font-weight:400;font-size:12.5px;color:var(--muted);font-family:var(--mono)}
+.more .row p{font-size:15px;color:var(--muted)}
+.more .row .stack{margin:0;padding:0;justify-content:flex-end}
+.note{margin-top:22px;font-size:14px;color:var(--muted);padding:14px 16px;background:var(--signal-soft);border-left:3px solid var(--signal)}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line)}
+.skills div{padding:20px 20px 22px 0;border-bottom:1px solid var(--line)}
+.skills div:not(:nth-child(3n+1)){padding-left:20px;border-left:1px solid var(--line)}
+.skills h4{margin:0 0 8px;font-size:14px;font-family:var(--mono);color:var(--accent);letter-spacing:.04em;font-weight:600}
+.skills p{font-size:15px;line-height:1.7}
+
+/* vision / contact */
+.vision{font-family:var(--serif);font-size:clamp(20px,2.6vw,26px);line-height:1.7;font-weight:600;max-width:34em}
+.contact{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px 28px;font-family:var(--mono);font-size:14px}
+footer{margin-top:40px;font-size:12.5px;color:var(--muted);font-family:var(--mono)}
+
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;gap:32px;padding-block:44px 40px}
+  .feat{grid-template-columns:1fr}
+  .results{grid-template-columns:1fr 1fr}
+  .results div:nth-child(3){border-left:0}
+  .results div:nth-child(n+3){border-top:1px solid var(--line)}
+  .sec-head,.route li{grid-template-columns:1fr;gap:10px}
+  .more .row{grid-template-columns:1fr;gap:6px}
+  .more .row .stack{justify-content:flex-start}
+  .skills{grid-template-columns:1fr 1fr}
+  .skills div,.skills div:not(:nth-child(3n+1)){padding:18px 16px 18px 0;border-left:0}
+  .skills div:nth-child(2n){padding-left:16px;border-left:1px solid var(--line)}
+}
+@media (max-width:520px){
+  .top nav{display:none}
+  .results,.skills{grid-template-columns:1fr}
+  .results div+div{border-left:0;border-top:1px solid var(--line)}
+  .skills div:nth-child(2n){padding-left:0;border-left:0}
+  .years b{font-size:36px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <span class="who">LEO · 里歐</span>
+    <nav aria-label="頁面導覽">
+      <a href="#results">成果</a>
+      <a href="#route">經歷</a>
+      <a href="#projects">專案</a>
+      <a href="#skills">技術</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div>
+      <p class="eyebrow">全端／後端架構工程師 · C# · .NET 8</p>
+      <h1>製造數據思維<span class="x">×</span>現代化軟體架構</h1>
+      <p class="lead">先在半導體封測廠做了近五年製程改善與 OEE 數據分析，再轉職成為 .NET 工程師。習慣從營運與跨部門的角度找出需求盲點，把複雜的業務流程拆解成穩定、好維護的系統。目前帶領 4 人開發與維運團隊。</p>
+      <div class="role">
+        <span class="chip">Legacy 系統重構</span>
+        <span class="chip">資料整合</span>
+        <span class="chip">資料庫效能調校</span>
+        <span class="chip">OWASP 資安實務</span>
+        <span class="chip">團隊工程治理</span>
+      </div>
+    </div>
+    <div class="years" aria-label="年資">
+      <div><b>≈5</b><span>年半導體製程改善、OEE 分析與品質工程</span></div>
+      <div><b>4+</b><span>年 C#／ASP.NET 開發與架構重構</span></div>
+      <p class="cap">醫療院所 · 國家級運動科學 · 單項運動協會 · 政府專案</p>
+    </div>
+  </div>
+
+  <section id="results" aria-labelledby="h-results">
+    <div class="sec-head">
+      <h2 id="h-results">專案成果</h2>
+      <p>近年參與的系統上線後，在作業流程與系統穩定度上的改變。</p>
+    </div>
+    <div class="results">
+      <div><b><small>−</small>33%</b><span>跨部門作業與行政流程耗時，整合三套異質系統為單一資料來源後</span><em>區域醫院 · 數據整合</em></div>
+      <div><b><small>−</small>70–80%</b><span>系統維運異常率，Delphi 財務健檢沖帳系統改寫為 ASP.NET MVC 後</span><em>醫學中心 · Legacy 重構</em></div>
+      <div><b><small>−</small>60%</b><span>營養補充品申請的行政作業耗時，串聯選手、營養師與倉管流程</span><em>運動科學 · 簽核與庫存</em></div>
+      <div><b>100%</b><span>補充品申請、簽核到領取全程無紙化</span><em>運動科學 · 數位轉型</em></div>
+    </div>
+  </section>
+
+  <section id="route" aria-labelledby="h-route">
+    <div class="sec-head">
+      <h2 id="h-route">經歷</h2>
+      <p>從製程工程到軟體開發，由近到遠。</p>
+    </div>
+    <ol class="route">
+      <li class="now">
+        <div class="stn"><span class="code">NOW</span><div class="org">岡山秀傳醫院<small>資訊組 · 帶領 4 人團隊</small></div></div>
+        <div>
+          <p>規劃資料架構，將個案收治系統、PAC 評估量表與預約網站三個異質資料庫整合為單一資料來源；推動系統升級至 .NET 8，導入非同步處理與相依性注入，並調校 MSSQL 執行計畫與索引，解決尖峰時段的慢查詢。</p>
+          <p>擔任 AI 知識庫檢索（RAG）導入臨床輔助的技術窗口，串接健康鏡 Face AI 遠端監測 API 與 LINE 官方帳號；在團隊中推動 Code Review、Git Flow 與測試。</p>
+        </div>
+      </li>
+      <li>
+        <div class="stn"><span class="code">NSC</span><div class="org">國家運動科學中心<small>獨立負責 PM／SA／SD／DB</small></div></div>
+        <div>
+          <p>開發運動員訓練監控、心理狀態雷達圖、時差調適、營養補充品申請與庫存等系統；專案成果獲考績甲等。</p>
+          <p>借調至中華民國自由車協會擔任技術負責人，從零建置人員與證照管理平台。</p>
+        </div>
+      </li>
+      <li>
+        <div class="stn"><span class="code">MC</span><div class="org">高雄醫學大學附設中和紀念醫院<small>系統開發</small></div></div>
+        <div><p>獨立將 Delphi 財務健檢沖帳系統重構為 ASP.NET MVC 網頁系統，改善沖帳效能，維運異常率下降 70–80%。</p></div>
+      </li>
+      <li>
+        <div class="stn"><span class="code">GOV</span><div class="org">哈瑪星科技<small>政府專案開發</small></div></div>
+        <div><p>依 OWASP Top 10 修補 SQL Injection、XSS 等原始碼層級弱點，負責的專案皆通過資安稽核。</p></div>
+      </li>
+      <li>
+        <div class="stn"><span class="code">DEV</span><div class="org">軟體開發培訓班<small>轉職</small></div></div>
+        <div><p>完成第一個團隊專題：露營裝備租借平台的後端 Web API，包含 JWT 登入與藍新金流串接。</p></div>
+      </li>
+      <li>
+        <div class="stn"><span class="code">FAB</span><div class="org">日月光半導體<small>製程改善與品質工程 · 近 5 年</small></div></div>
+        <div><p>負責封測製程改善、OEE 數據分析與品質工程，培養出以數據釐清問題、跨部門推動改善的工作方式。</p></div>
+      </li>
+    </ol>
+  </section>
+
+  <section id="projects" aria-labelledby="h-projects">
+    <div class="sec-head">
+      <h2 id="h-projects">代表專案</h2>
+      <p>三個最能說明我怎麼處理複雜業務流程的系統，其餘列在下方。</p>
+    </div>
+    <div class="feat">
+      <article class="card">
+        <span class="ctx">醫療 · 急性後期照護</span>
+        <h3>PAC 照護品質評估系統</h3>
+        <p>病患收案、評估量表、報表列印與權限稽核，前後端分離的新架構。</p>
+        <ul>
+          <li>19 種臨床量表（MMSE、Barthel、Berg、Fugl-Meyer、EQ-5D…），後端以策略模式計分</li>
+          <li>家系圖繪製、同意書手寫簽名、印鑑套印</li>
+          <li>PBKDF2 密碼、CSRF、CSP、登入鎖定與速率限制</li>
+          <li>GitHub Actions 自動建置與測試</li>
+        </ul>
+        <div class="stack"><span>.NET 8</span><span>EF Core</span><span>Vue 3</span><span>Vite</span><span>xUnit</span><span>Vitest</span></div>
+      </article>
+      <article class="card">
+        <span class="ctx">運動科學 · 簽核與庫存</span>
+        <h3>營養補充品申請與庫存系統</h3>
+        <p>選手線上申請、多階段簽核、依效期先進先出扣庫的完整流程。</p>
+        <ul>
+          <li>依隊伍設定簽核關卡，支援代理人、加會、退件補件</li>
+          <li>個人與隊伍領用額度，依選手級別套用不同表單</li>
+          <li>批號效期入庫、FIFO 扣庫、期別開關帳、安全庫存估算</li>
+          <li>Email 與 LINE Messaging API 推播通知</li>
+        </ul>
+        <div class="stack"><span>ASP.NET MVC 5</span><span>EF6</span><span>SQL Server</span><span>LINE API</span><span>EPPlus</span></div>
+      </article>
+      <article class="card">
+        <span class="ctx">運動科學 · 訓練監控</span>
+        <h3>運動員訓練監控系統</h3>
+        <p>教練與選手記錄訓練，自動計算負荷指標與檢測結果。</p>
+        <ul>
+          <li>session-RPE 訓練量，射箭、射擊專項負荷算法</li>
+          <li>單調性、訓練張力、指數加權 ACWR</li>
+          <li>多趟檢測取 R² 最佳組合回歸，推算臨界速度與無氧做功量</li>
+          <li>心理特質問卷與 EWMA 指標追蹤</li>
+        </ul>
+        <div class="stack"><span>ASP.NET MVC 5</span><span>EF6</span><span>Chart.js</span><span>jQuery</span></div>
+      </article>
+    </div>
+
+    <div class="more">
+      <div class="row">
+        <h4>選手身心狀態雷達圖<small>運動心理</small></h4>
+        <p>心理與身心狀態檢測，以雷達圖呈現個人與隊伍趨勢；心理師可回覆選手留言，裁判另有專屬量表。</p>
+        <div class="stack"><span>MVC 5</span><span>Chart.js</span><span>PBKDF2</span></div>
+      </div>
+      <div class="row">
+        <h4>旅行時差調整系統<small>運動科學</small></h4>
+        <p>依航班行程判斷飛行方向與時差，產生作息調整天數與機上睡眠、光照時段甘特圖。</p>
+        <div class="stack"><span>MVC 5</span><span>Leaflet</span><span>iTextSharp</span></div>
+      </div>
+      <div class="row">
+        <h4>人員及證照管理系統<small>單項運動協會</small></h4>
+        <p>人員線上申請與審核、證照與到期管理、賽事成績登錄，分為會員前台與管理後台。</p>
+        <div class="stack"><span>MVC 5</span><span>EF6</span></div>
+      </div>
+      <div class="row">
+        <h4>特約機關健檢收款出納<small>醫學中心</small></h4>
+        <p>由 Delphi 改寫的出納系統，處理多種收款方式、依資料年月拆分金額，並以 Crystal Reports 列印收據。</p>
+        <div class="stack"><span>MVC</span><span>WCF</span><span>Crystal Reports</span></div>
+      </div>
+      <div class="row">
+        <h4>運動恢復泡浴建議<small>運動科學</small></h4>
+        <p>依使用目的與時機對照冰水浴、對比浴、熱水浴建議，回饋表單具 reCAPTCHA 與頻率限制。</p>
+        <div class="stack"><span>MVC 5</span><span>reCAPTCHA</span></div>
+      </div>
+      <div class="row">
+        <h4>露營裝備租借平台 API<small>轉職第一個專案</small></h4>
+        <p>培訓班團隊專題，負責後端：營地、商品、購物車與訂單 API，JWT 登入與藍新金流串接。</p>
+        <div class="stack"><span>Web API 2</span><span>EF Code First</span><span>JWT</span></div>
+      </div>
+    </div>
+    <p class="note">以上系統屬於任職或委託單位，原始碼不對外公開。面試時可提供以示範資料錄製的操作影片，或現場展示。</p>
+  </section>
+
+  <section id="skills" aria-labelledby="h-skills">
+    <div class="sec-head">
+      <h2 id="h-skills">技術</h2>
+      <p>實際在上述專案中使用過的技術。</p>
+    </div>
+    <div class="skills">
+      <div><h4>後端</h4><p>C#、.NET 8、ASP.NET Core、ASP.NET MVC 5、Web API、WCF、EF Core、Entity Framework 6</p></div>
+      <div><h4>前端</h4><p>Vue 3、Vite、Pinia、Razor、Bootstrap 5、jQuery、Chart.js、Leaflet</p></div>
+      <div><h4>資料庫</h4><p>MSSQL 執行計畫與索引調校、Database First／Code First、報表匯出（EPPlus、Crystal Reports）</p></div>
+      <div><h4>資安</h4><p>OWASP Top 10、PBKDF2 密碼雜湊、CSRF／CSP、登入鎖定與速率限制、稽核日誌</p></div>
+      <div><h4>整合</h4><p>LINE Messaging API、藍新金流、JWT、AI RAG 知識庫、Face AI 監測 API</p></div>
+      <div><h4>工程實務</h4><p>Git Flow、Code Review、GitHub Actions、xUnit、Vitest、帶領 4 人團隊</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-next">
+    <div class="sec-head">
+      <h2 id="h-next">接下來</h2>
+      <p>我在尋找什麼樣的工作。</p>
+    </div>
+    <p class="vision">我最擅長在需求模糊、架構老舊的狀況下釐清問題、找出解法。希望加入重視技術價值與團隊協作的組織，用 .NET 8、資料庫效能調校與 AI 整合的經驗，打造穩定、好延伸的核心系統。</p>
+    <div class="contact">
+      <span>GitHub：<a href="https://github.com/leo522">github.com/leo522</a></span>
+    </div>
+    <footer>© Leo 里歐</footer>
+  </section>
+</div>
+</body>
+</html>

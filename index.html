@@ -96,7 +96,7 @@ section{padding-block:56px;border-top:1px solid var(--line)}
 .route p+p{margin-top:6px;color:var(--muted);font-size:15px}
 
 /* projects */
-.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.feat{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
 .card{background:var(--surface);border:1px solid var(--line);padding:24px 22px;display:flex;flex-direction:column;gap:14px}
 .card .ctx{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.04em}
 .card h3{font-family:var(--serif);font-weight:900;font-size:21px;line-height:1.4}
@@ -235,7 +235,7 @@ footer{margin-top:40px;font-size:12.5px;color:var(--muted);font-family:var(--mon
   <section id="projects" aria-labelledby="h-projects">
     <div class="sec-head">
       <h2 id="h-projects">代表專案</h2>
-      <p>三個最能說明我怎麼處理複雜業務流程的系統，其餘列在下方。</p>
+      <p>四個最能說明我怎麼處理複雜業務流程的系統，其餘列在下方。</p>
     </div>
     <div class="feat">
       <article class="card">
@@ -249,6 +249,18 @@ footer{margin-top:40px;font-size:12.5px;color:var(--muted);font-family:var(--mon
           <li>GitHub Actions 自動建置與測試</li>
         </ul>
         <div class="stack"><span>.NET 8</span><span>EF Core</span><span>Vue 3</span><span>Vite</span><span>xUnit</span><span>Vitest</span></div>
+      </article>
+      <article class="card">
+        <span class="ctx">醫療 · 健康促進</span>
+        <h3>健康雲線上預約平台</h3>
+        <p>民眾預約與院內管理整合在同一平台，也是數據中台整合的三套系統之一。</p>
+        <ul>
+          <li>團體課程、復能器材、PAC、參訪四種預約，QR Code 快速入口</li>
+          <li>課程排程行事曆、器材時段容量、報名與列印簽到表</li>
+          <li>個案收治、轉介審核、同意書範本與各類報表</li>
+          <li>LINE LIFF 綁定推播，Gmail API 以 OAuth 授權寄信</li>
+        </ul>
+        <div class="stack"><span>.NET 8</span><span>EF Core</span><span>FullCalendar</span><span>LINE LIFF</span><span>Gmail API</span></div>
       </article>
       <article class="card">
         <span class="ctx">運動科學 · 簽核與庫存</span>
@@ -277,11 +289,6 @@ footer{margin-top:40px;font-size:12.5px;color:var(--muted);font-family:var(--mon
     </div>
 
     <div class="more">
-      <div class="row">
-        <h4>健康雲線上預約平台<small>醫療 · 健康促進</small></h4>
-        <p>民眾預約團體課程、復能器材、PAC 與參訪，院內管理課程排程、個案收治與轉介審核；整合 LINE 綁定通知與 Gmail API 寄信。</p>
-        <div class="stack"><span>.NET 8</span><span>EF Core</span><span>LINE LIFF</span><span>Gmail API</span></div>
-      </div>
       <div class="row">
         <h4>選手身心狀態雷達圖<small>運動心理</small></h4>
         <p>心理與身心狀態檢測，以雷達圖呈現個人與隊伍趨勢；心理師可回覆選手留言，裁判另有專屬量表。</p>
